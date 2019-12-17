@@ -23,11 +23,11 @@
 			url: "capturarExcecao", //para qual servlet? 
 			data: { valorParam : valorInformado }
 		})
-			.done(function(response){//resposta ok - nenhum erro
+			.done (function(response){//resposta ok - nenhum erro
 				alert("Sucesso : " + response);
 			})
-			.fail(function(response){//resposta erro - algum problema ocorreu
-				alert("Erro: " + response);
+			.fail(function (xhr, status, errorThrown) { //resposta erro - algum problema ocorreu
+				alert("Erro: " + xhr.responseText); //mostra resposta do servidor
 			});
 	}
 </script>

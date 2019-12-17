@@ -27,8 +27,8 @@ public class CapturarExcecao extends HttpServlet {
 			response.getWriter().write("Processada com sucesso");
 		} catch (Exception e) {
 			response.setStatus(500);//erro interno do servidor
-			response.getWriter().write("Erro ao Processar : " + e.getMessage());
-		}
+			response.getWriter().write("Erro ao Processar : " + e.getMessage()); //add valor ao responseText
+		} 
 	}
 
 }
