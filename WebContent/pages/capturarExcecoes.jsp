@@ -16,7 +16,16 @@
 
 <script type="text/javascript">
 	function testarExcecao() {
-		alert($('#txtvalor').val());
+		valorInformado = $('#txtvalor').val();
+		
+		$.ajax({
+			method: "POST",
+			url: "capturarExcecao", //para qual servlet? 
+			data: { valorParam : valorInformado }
+		})
+			.always(function(response){//sempre capta o retorno
+				alert(response);
+			});
 	}
 </script>
 </html>
