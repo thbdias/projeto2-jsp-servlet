@@ -46,7 +46,7 @@ public class ServiletAutenticacao extends HttpServlet {
 		}
 		else {
 			//se o login falou redireciona para login novamente
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/autenticar.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/autenticar.jsp");
 			dispatcher.forward(request, response);
 		}
 	}

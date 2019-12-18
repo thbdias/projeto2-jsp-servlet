@@ -35,7 +35,7 @@ public class FilterAutenticacao implements Filter {
 		
 		//usuario não logado
 		if (userLogado == null) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/autenticar.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/autenticar.jsp");
 			dispatcher.forward(request, response);
 			
 			return; // para o processo para redirecionar
