@@ -26,25 +26,25 @@
 		
 		reader.onloadend = function () {
 			target.src = reader.result;
-		};
-		
-		if (file){
-			reader.readAsDataURL(file);
 			
 			//upload ajax
 			$.ajax({
 				method: "POST",
 				url: "fileUpload", //para qual servlet? 
-				data: { fileUploadParam: target.src }
+				data: { fileUploadParam: reader.result }
 			})
 			.done(function (response) {
 				alert("sucesso: " + response);
 			})
 			.fail(function (xhr, status, errorThrown) {
 				alert("erro: " + xhr.responseText); //mostra resposta do servidor
-			});
-			
+			});			
 			//upload ajax fim
+		};
+		
+		
+		if (file){
+			reader.readAsDataURL(file);
 		}
 		else {
 			target.src = "";

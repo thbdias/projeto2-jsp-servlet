@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/fileUpload")
+@WebServlet("/pages/fileUpload")
 public class FileUpload extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -19,6 +19,16 @@ public class FileUpload extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		try {
+		// usar variavel fileUpload para salvar no bando de dados
+		String fileUpload = request.getParameter("fileUploadParam"); 
+		
+		response.getWriter().write("Upload realizado com sucesso");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			response.getWriter().write("Erro fatal ao realizar upload");
+		}
 	}
 
 }
