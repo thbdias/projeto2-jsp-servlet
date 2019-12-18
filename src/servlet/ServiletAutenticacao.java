@@ -26,6 +26,7 @@ public class ServiletAutenticacao extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
+		String url= request.getParameter("url");
 		
 		// neste momento pode ser feito uma validação no bando de dados
 		if (login.equalsIgnoreCase("admin") && senha.equalsIgnoreCase("123")) {
@@ -41,7 +42,7 @@ public class ServiletAutenticacao extends HttpServlet {
 			session.setAttribute("usuario", user);
 			
 			//redireciona para o sistema autorizar
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/pages/acessoAoSistema.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 			dispatcher.forward(request, response);
 		}
 		else {

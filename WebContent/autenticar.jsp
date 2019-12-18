@@ -10,6 +10,7 @@
 	<h1>Autenticar Usuário</h1>
 	
 	<form action="serviletAutenticacao" method="post">
+		<input readonly="readonly" type="hidden" id="url" name="url" value="<%= request.getParameter("url")%>">
 		<table>
 			<tr>
 				<td>Login:</td>

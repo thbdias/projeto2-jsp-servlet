@@ -31,14 +31,15 @@ public class FilterAutenticacao implements Filter {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpSession session = req.getSession();
 		
-		
+		//url que estou tentando acessar
+		String urlParaAutenticar = req.getServletPath();
 		
 		//retorna null caso não esteja logado
 		UserLogado userLogado = (UserLogado) session.getAttribute("usuario");
 		
 		//usuario não logado
-		if (userLogado == null) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/autenticar.jsp");
+		if (userLogado == null && !urlParaAutenticar.equalsIgnoreCase("/pages/serviletAutenticacao")) {
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/autenticar.jsp?url="+urlParaAutenticar);
 			dispatcher.forward(request, response);
 			
 			return; // para o processo para redirecionar
