@@ -25,7 +25,10 @@
 	<br> <br>
 	
 	<label>Data Final</label>
-	<input type="text" id="dataFinal" name="dataFinal" readonly="readonly" value="${dataFinal}">	
+	<input type="text" id="dataFinal" name="dataFinal" readonly="readonly" value="${dataFinal}">
+	
+	<label>Total de Dias</label>
+	<input type="text" id="dias" name="dias" readonly="readonly" value="${dias}">	
 	
 </body>
 
