@@ -29,7 +29,10 @@
 			<td><a href="pages/upload.jsp">Upload (não terminado - projeto1 possui completo)</a></td>
 		</tr>
 		<tr>
-			<td><a href="pages/dataTable.jsp">DataTable jQuery</a></td>
+			<td><a href="pages/dataTable.jsp">DataTable jQuery (não terminado)</a></td>
+		</tr>
+		<tr>
+			<td><a href="pages/datas.jsp">Calculando datas</a></td>
 		</tr>
 	</table>
 </body>
