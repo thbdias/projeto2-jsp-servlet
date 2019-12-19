@@ -34,6 +34,9 @@
 		<tr>
 			<td><a href="pages/datas.jsp">Calculando datas</a></td>
 		</tr>
+		<tr>
+			<td><a href="pages/calendario.jsp">Calendário (não terminado)</a></td>
+		</tr>
 	</table>
 </body>
 </html>
