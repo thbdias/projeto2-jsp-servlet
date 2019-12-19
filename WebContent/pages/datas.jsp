@@ -12,5 +12,28 @@
 </head>
 <body>
 	
+	<form action="calcularDataFinal" method="post">
+	
+		<label>Data Inicial</label>
+		<input id="data" name="data">
+		
+		<label>Tempo em horas</label>
+		<input type="text" id="tempo" name="tempo">
+		
+		<input type="submit" value="Calcular">
+	</form>
+	<br> <br>
+	
+	<label>Data Final</label>
+	<input type="text" id="dataFinal" name="dataFinal" readonly="readonly" value="${dataFinal}">	
+	
 </body>
+
+<script type="text/javascript">
+	$(function () {
+		$('#data').datepicker({dateFormat: 'dd/mm/yy'});
+	})
+</script>
+
+
 </html>
